@@ -1,0 +1,28 @@
+{
+  "name": "ng-ver",
+  "version": "1.0.0",
+  "description": "CLI tool to determine Angular version EOL",
+  "main": "./bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baronvonperko/ng-ver.git"
+  },
+  "bin": {
+    "ng-ver": "./bin/index.js"
+  },
+  "author": "Chris Perko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baronvonperko/ng-ver/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/baronvonperko/ng-ver#readme",
+  "dependencies": {
+    "boxen": "^7.1.1",
+    "chalk": "^5.3.0",
+    "table": "^6.8.1"
+  }
+}

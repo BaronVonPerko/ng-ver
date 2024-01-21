@@ -59,14 +59,14 @@ if (packageFile) {
         printData();
 
         if (Object.keys(packageJson.dependencies).includes('@angular/core')) {
-            const majVersion = packageJson.dependencies['@angular/core'].split('.')[0].replace('^', '');
+            const majVersion = packageJson.dependencies['@angular/core'].split('.')[0].replace('^', '').replace('~', '');
             console.log(
                 chalk.white('This project is using',
                     chalk.inverse(`Angular version ${majVersion}`),
-                    'which is currently in',
-                    majVersion === '17' ? chalk.green('ACTIVE') : '',
-                    majVersion === '16' || majVersion === '15' ? chalk.yellow('LTS') : '',
-                    majVersion === '17' || majVersion === '16' || majVersion === '15' ? 'support.' : chalk.red('EOL')
+                    'which is currently',
+                    majVersion === '17' ? 'in ' + chalk.green('ACTIVE') + ' support.' :
+                    majVersion === '16' || majVersion === '15' ? 'in ' + chalk.yellow('LTS') + ' support.' :
+                    majVersion === '17' || majVersion === '16' || majVersion === '15' ? 'support.' : chalk.red('EOL') + '.',
             ));
         } else {
             printNotAngularProject();

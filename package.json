@@ -1,6 +1,6 @@
 {
   "name": "ng-ver",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool to determine Angular version EOL",
   "main": "./bin/index.js",
   "scripts": {

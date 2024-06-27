@@ -65,9 +65,9 @@ if (packageFile) {
                 chalk.white('This project is using',
                     chalk.inverse(`Angular version ${majVersion}`),
                     'which is currently',
-                    majVersion === '17' ? 'in ' + chalk.green('ACTIVE') + ' support.' :
-                    majVersion === '16' || majVersion === '15' ? 'in ' + chalk.yellow('LTS') + ' support.' :
-                    majVersion === '17' || majVersion === '16' || majVersion === '15' ? 'support.' : chalk.red('EOL') + '.',
+                    majVersion === '18' ? 'in ' + chalk.green('ACTIVE') + ' support.' :
+                    majVersion === '17' || majVersion === '16' ? 'in ' + chalk.yellow('LTS') + ' support.' :
+                    chalk.red('EOL') + '.',
             ));
         } else {
             printNotAngularProject();
